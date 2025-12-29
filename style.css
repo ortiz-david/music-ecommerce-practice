@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+}
+header {
+    background-color: grey;
+    width: auto;
+    height: 120px;
+    margin:  0 0 40px 0;
+    box-shadow: 5px 5px 10px rgb(149, 149, 149) ;
+}
+h1 {
+    background-color: rgb(199, 198, 198);
+    padding: 20px;
+    margin: 0px;
+    font-family:fantasy, cursive;
+    font-size: 40px;
+    text-align: center;
+}
+.contenedor_productos {
+    display: flex; /* utiliza flexbox para organizar los productos */
+    flex-wrap: wrap; /* permite que los productos se ajusten a la siguiente línea si no caben */
+    justify-content: center; /* centra los elementos */
+    gap: 30px; /* espacio entre productos */
+    padding: 30px; /* espacio interno del contenedor */
+    max-width: 1200px; /* ancho máximo del contenedor */
+    margin: 0 auto; /* centra todo el contenedor */
+ }
+.producto {
+    flex: 1 1 300px; /* Mágico: crece, encoge, base 300px */
+    max-width: 350px;
+    background-color: white;
+    border-radius: 10px; /* esquinas redondeadas */
+    overflow: hidden; /* para que bordes redondeados funcionen */
+    text-align: center;
+    box-shadow: 10px 10px 10px rgba(109, 109, 109, 0.3); /* sombra suave */
+}
+.imagen{
+    width: auto;
+    height: 200px;
+    display: block;
+    margin:  5px auto 20px auto;
+    box-shadow: 3px 3px 5px rgba(109, 109, 109, 0.3);
+    border-radius: 10px;    
+}
+.producto_texto {
+    font-family: Arial, sans-serif;
+    display: block;
+    margin:  0 0 20px 0;
+    font-size: medium;
+}
+span {
+    font-weight: bold;
+}
+.footer_texto{
+    text-align: center;
+    font-size: 14px;
+    color: white;
+      background-color: grey;
+    width: auto;
+    padding: 10px;
+}
+.producto_boton {
+   
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 0;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgb(228, 225, 225);
+    transition: 0.2s; /* Transición suave que cambia el color */
+}
+.producto_boton:hover { /* Efecto al pasar el cursor sobre el botón */
+    background-color: rgb(198, 199, 199); 
+    transform: translateY(-3px); /* Efecto de elevación al pasar el cursor el motivo por el que está aqui es por que cuando no tenes el cursor arriba del botón, el navegador muesntra la clase de arriba, pero cuando el botón está en hover, se aplica esta clase, si la transición está en la otra clase, la transción al quitar el cursor se ve horrible xd*/
+}
+/* Agrega al final de tu style.css */
+.carrito-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.carrito {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    min-width: 200px;
+}
+
+.carrito h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#contador-carrito, #total-carrito {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#vaciar-carrito {
+    width: 100%;
+    margin-top: 10px;
+}
